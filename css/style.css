@@ -120,12 +120,12 @@ ul {
          }
     
     .header .overlay h1 {
-        padding-top: 20.5% !important;
-        font-size: 20px !important
+        padding-top: 13.5% !important;
+        font-size: 17px !important
     }
     .header .overlay p {
         
-        font-size: 16px !important    
+        font-size: 14px !important    
     }
 }
 
@@ -553,11 +553,6 @@ ul {
     background-color: #1abc9c
 }
 
-body {
--webkit-transform:rotate(30deg);
-transform:rotate(30deg);
-
-}
 /* Start Contact Media */
 @media(max-width: 767px) {
     
