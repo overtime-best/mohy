@@ -6,8 +6,18 @@ $(function () {
     $('.header').height($(window).height());
     
     //Ad And Remove Active Class
-
-
+    
+    $('.fa-bars').click(function () {
+       
+        $('.fixed-menu').slideToggle();
+        
+    });
+    
+    $('.fixed-menu ul li').click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        $('.fixed-menu').slideToggle(function () {
+        });
+    });
     
     //adjust change the navbar background and color
     
@@ -28,9 +38,11 @@ $(function () {
         
         $('.public').each(function () {
             if ($(window).scrollTop() + 30 >= $(this).offset().top) {
-                $('.links li[data-value="' + $(this).attr('id') + '"]').addClass('active').siblings().removeClass('active');
+                $('li[data-value="' + $(this).attr('id') + '"]').addClass('active').siblings().removeClass('active');
             }
         });
+        
+        
         
         //Show chevron Up After Scroll
         if ($(this).scrollTop() <= $('.header').offset().top) {
@@ -41,7 +53,7 @@ $(function () {
     });
     // Smoth Scroll To Elements 
     
-    $('.links li').on('click', function () {
+    $('li').on('click', function () {
         $('body, html').animate({
             scrollTop: $('#' + $(this).data('value')).offset().top
         }, 500);
